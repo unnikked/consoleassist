@@ -146,7 +146,7 @@ def run_gcloud_command(command: str) -> str:
             capture_output=True
         )
         return result.stdout if result.stdout else "Command executed successfully (no output)"
-    except subprocess.CalledProcessError as e:
+    except subprocess.CalledProcessError as e: 
         return f"Error executing command: {e.stderr if e.stderr else str(e)}"
     except Exception as e:
         return f"Unexpected error: {str(e)}"
